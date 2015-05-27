@@ -61,7 +61,7 @@ class Api
     
     private function getWeaterForGibm()
     {
-        $response = [];
+        $response = array();
 
         if ($fh = fopen($this->api, 'r')){
             while($line = fgets($fh, 1000)){
@@ -86,7 +86,7 @@ class Api
     
     private function fetchGibmData($data)
     {
-        $response = [];
+        $response = array();
         foreach($data as $dataset){
             $cells = explode(';', preg_replace('/[\r\n]{1,2}$/', '',$dataset));
 
