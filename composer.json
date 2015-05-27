@@ -11,6 +11,9 @@
         {
             "name": "Patrick Reimers",
             "email": "patrick@reimers.me"
+        },{
+            "name": "Dominik Müller",
+            "email": "ashura@protonmail.ch"
         }
     ],
     "minimum-stability": "dev",
