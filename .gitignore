@@ -51,3 +51,4 @@ crashlytics-build.properties
 /build/
 /_gsdata_/
 /composer.phar
+/composer.lock
