@@ -110,7 +110,7 @@ class Api
      * @return string
      * @throws \Exception
      */
-    private function getLocationForGibmNumber($num)
+    public function getLocationForGibmNumber($num)
     {
         switch($num){
             case 1:
