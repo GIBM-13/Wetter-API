@@ -95,7 +95,7 @@ class Api
 
             $location = $this->getLocationForGibmNumber($cells[1]);
             $response[$cells[0]][$location]['weather'] = $cells[2];
-            $response[$cells[0]][$location]['temperature'] = ['min' => $temperature[0], 'max' => $temperature[1]];
+            $response[$cells[0]][$location]['temperature'] = array('min' => $temperature[0], 'max' => $temperature[1]);
             $response[$cells[0]][$location]['wind'] =  ['direction' => $wind[0], 'speed' => $wind[1]];
             $response[$cells[0]][$location]['pollen'] = $cells[5];
         }
