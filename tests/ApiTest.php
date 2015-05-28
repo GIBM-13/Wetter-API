@@ -14,6 +14,8 @@ class ApiTest extends PHPUnit_Framework_TestCase{
         $api = new Api(Api::GIBM);
         $response = $api->getWeather();
         $this->assertCount(7, $response);
+        $this->assertCount(7, $response[date('Y-m-d')]);
+        $this->assertCount(4, $response[date('Y-m-d')]['Basel']);
     }
 
     public function testGetWeatherYahoo(){
@@ -26,6 +28,17 @@ class ApiTest extends PHPUnit_Framework_TestCase{
         $api = new Api(Api::OPEN_WEATHER);
         $response = $api->getWeather();
         $this->assertNull($response);
+    }
+
+    public function testGetLocationForGibmNumber(){
+        $api = new Api(Api::GIBM);
+        $this->assertEquals("Zürich", $api->getLocationForGibmNumber(1));
+        $this->assertEquals("Genf", $api->getLocationForGibmNumber(2));
+        $this->assertEquals("Bern", $api->getLocationForGibmNumber(3));
+        $this->assertEquals("Basel", $api->getLocationForGibmNumber(4));
+        $this->assertEquals("Graubünden", $api->getLocationForGibmNumber(5));
+        $this->assertEquals("Wallis", $api->getLocationForGibmNumber(6));
+        $this->assertEquals("Tessin", $api->getLocationForGibmNumber(7));
     }
 
     /**

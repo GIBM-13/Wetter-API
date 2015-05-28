@@ -1,0 +1,1 @@
+vendor\bin\phpunit -c phpunit.xml --coverage-html build\logs

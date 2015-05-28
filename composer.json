@@ -10,10 +10,12 @@
     "authors": [
         {
             "name": "Patrick Reimers",
-            "email": "patrick@reimers.me"
+            "email": "patrick@reimers.me",
+            "role": "Developer"
         },{
             "name": "Dominik Müller",
-            "email": "ashura@protonmail.ch"
+            "email": "ashura@protonmail.ch",
+            "role": "Developer"
         }
     ],
     "minimum-stability": "dev",
