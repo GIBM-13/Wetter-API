@@ -14,8 +14,8 @@ class ApiTest extends PHPUnit_Framework_TestCase{
         $api = new Api(Api::GIBM);
         $response = $api->getWeather();
         $this->assertCount(7, $response);
-        $this->assertCount(7, $response[date('Y-m-d')]);
-        $this->assertCount(4, $response[date('Y-m-d')]['Basel']);
+        $this->assertCount(7, $response[date('Y-m-d',time()+86400)]);
+        $this->assertCount(4, $response[date('Y-m-d',time()+86400)]['Basel']);
     }
 
     public function testGetWeatherYahoo(){
