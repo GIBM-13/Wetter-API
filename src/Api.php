@@ -39,27 +39,27 @@ class Api
         $this->api = $api;
     }
 
-    public function getWheater($location = null, $date = null)
+    public function getWeather($location = null, $date = null)
     {
         $date = !isset($date) ? new \DateTime() : $date;
         
         switch ($this->api){
             case Api::GIBM:
                 
-                return $this->getWeaterForGibm();
+                return $this->getWeatherForGibm();
             case Api::YAHOO:
                 
-                break;
+                return $this->getWeatherForYahoo();
             case Api::OPEN_WEATHER:
                 
-                break;
+                return $this->getWeatherForOpenWeather();
             default:
                 
                 throw new \Exception('Please use one of our provided APIs in the Api class');
         }
     }
     
-    private function getWeaterForGibm()
+    private function getWeatherForGibm()
     {
         $response = array();
 
@@ -76,12 +76,12 @@ class Api
     
     private function getWeatherForYahoo()
     {
-        
+        return null;
     }
     
     private function getWeatherForOpenWeather()
     {
-        
+        return null;
     }
     
     private function fetchGibmData($data)
